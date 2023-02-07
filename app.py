@@ -27,9 +27,9 @@ def predict():
         y_Predict = ''.join(phish_model_ls.predict(X_predict))
         print(y_Predict)
         if y_Predict == 'bad':
-            result = "This is a Phishing Site"
+            result = "This is a malicous Site"
         else:
-            result = "This is not a Phishing Site"
+            result = "This is not a malicous Site"
 
         return render_template('index.html', prediction_text = result)
 
