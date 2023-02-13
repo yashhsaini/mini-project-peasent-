@@ -1,9 +1,7 @@
-from flask import Flask, request, Response, render_template
 import pickle
-
-
+from flask import Flask, request, Response, render_template
 app = Flask(__name__)
-# read our pickle file and label our logisticmodel as model
+
 phish_model_ls = pickle.load(open('phishing.pkl', 'rb'))
 
 urlError = {
